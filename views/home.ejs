@@ -1,0 +1,12 @@
+<%- include('./partial/header.ejs') %>
+    <form action="/convert" method="post" enctype="multipart/form-data">
+        <br><br>
+        <label for="image"><b> Upload Image to Read Out ==></b></label>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="file" name="image" id="image">
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Convert" id="convert">
+    </form>
+<%- include('./partial/footer.ejs') %>

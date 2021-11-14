@@ -1,0 +1,24 @@
+<%- include('./partial/header.ejs') %>
+<div class="convert">
+  
+<img src=<%=ret %> alt="" srcset="" name="imagePix" id="imagePix" alt="Image Convert" />
+    
+<br>
+<% if(songLength>= 2){ %>
+    <input type="button" value="Play Audio" name="play" id="play" onclick="playSound('all')">
+    <% } else{ %>
+        <input type="button" value="Play Audio" name="play" id="play" onclick="playSound('0')">
+        <% } console.log(songLength) %>
+            <br>
+
+            <hr />
+         <h1> <a href="./">Upload another image</a></h1>   
+
+</div>      
+    <script>
+        function playSound(sound){
+            let play = new Audio("./../audio/"+sound+".mp3")
+            play.play();
+        }
+    </script>
+<%- include('./partial/footer.ejs') %>
